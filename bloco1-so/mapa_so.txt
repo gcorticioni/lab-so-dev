@@ -7,24 +7,110 @@
 # explicando a função do diretório com suas próprias palavras.
 
 /proc
-  
+1   12  15  32  47  66  9          bus      consoles  devices      driver       filesystems  iomem    kallsyms  locks    mounts        partitions   slabinfo  swaps    thread-self  uptime       vmstat
+10  13  2   4   5   7   92         cgroups  cpuinfo   device-tree  execdomains  fs           ioports  kmsg      meminfo  net           sched_debug  softirqs  sys      timer_list   version      zoneinfo
+11  14  3   42  6   8   buddyinfo  cmdline  crypto    diskstats    fb           interrupts   irq      loadavg   misc     pagetypeinfo  self         stat      sysvipc  tty          vmallocinfo
 
 /proc/cpuinfo
-  
+hart    : 0
+isa     : rv64acdfimsu
+mmu     : sv48
 
 /proc/meminfo
-  
+MemTotal:         186324 kB
+MemFree:          177476 kB
+MemAvailable:     177040 kB
+Buffers:               0 kB
+Cached:             3804 kB
+SwapCached:            0 kB
+Active:             3988 kB
+Inactive:           1084 kB
+Active(anon):       1268 kB
+Inactive(anon):        0 kB
+Active(file):       2720 kB
+Inactive(file):     1084 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:          1304 kB
+Mapped:             2840 kB
+Shmem:                 0 kB
+Slab:               2988 kB
+SReclaimable:        476 kB
+SUnreclaim:         2512 kB
+KernelStack:         160 kB
+PageTables:           68 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:       93160 kB
+Committed_AS:       2336 kB
+VmallocTotal:   67108863 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
 
 /proc/uptime
-  
+1537.70 1533.91  
 
 /bin
-
+2349
   
 /dev
-  
+console             ptya2  ptyb9  ptyd0  ptye7  ptype  ptyr5  ptysc  ptyu3  ptyva  ptyx1  ptyy8  ptyzf   tty27  tty48  ttya2  ttyb9  ttyd0  ttye7  ttype  ttyr5  ttysc  ttyu3  ttyva  ttyx1  ttyy8  ttyzf
+cpu_dma_latency     ptya3  ptyba  ptyd1  ptye8  ptypf  ptyr6  ptysd  ptyu4  ptyvb  ptyx2  ptyy9  random  tty28  tty49  ttya3  ttyba  ttyd1  ttye8  ttypf  ttyr6  ttysd  ttyu4  ttyvb  ttyx2  ttyy9  urandom
+full                ptya4  ptybb  ptyd2  ptye9  ptyq0  ptyr7  ptyse  ptyu5  ptyvc  ptyx3  ptyya  tty     tty29  tty5   ttya4  ttybb  ttyd2  ttye9  ttyq0  ttyr7  ttyse  ttyu5  ttyvc  ttyx3  ttyya  vcs
+hvc0                ptya5  ptybc  ptyd3  ptyea  ptyq1  ptyr8  ptysf  ptyu6  ptyvd  ptyx4  ptyyb  tty0    tty3   tty50  ttya5  ttybc  ttyd3  ttyea  ttyq1  ttyr8  ttysf  ttyu6  ttyvd  ttyx4  ttyyb  vcs1
+hvc1                ptya6  ptybd  ptyd4  ptyeb  ptyq2  ptyr9  ptyt0  ptyu7  ptyve  ptyx5  ptyyc  tty1    tty30  tty51  ttya6  ttybd  ttyd4  ttyeb  ttyq2  ttyr9  ttyt0  ttyu7  ttyve  ttyx5  ttyyc  vcsa
+hvc2                ptya7  ptybe  ptyd5  ptyec  ptyq3  ptyra  ptyt1  ptyu8  ptyvf  ptyx6  ptyyd  tty10   tty31  tty52  ttya7  ttybe  ttyd5  ttyec  ttyq3  ttyra  ttyt1  ttyu8  ttyvf  ttyx6  ttyyd  vcsa1
+hvc3                ptya8  ptybf  ptyd6  ptyed  ptyq4  ptyrb  ptyt2  ptyu9  ptyw0  ptyx7  ptyye  tty11   tty32  tty53  ttya8  ttybf  ttyd6  ttyed  ttyq4  ttyrb  ttyt2  ttyu9  ttyw0  ttyx7  ttyye  vga_arbiter
+hvc4                ptya9  ptyc0  ptyd7  ptyee  ptyq5  ptyrc  ptyt3  ptyua  ptyw1  ptyx8  ptyyf  tty12   tty33  tty54  ttya9  ttyc0  ttyd7  ttyee  ttyq5  ttyrc  ttyt3  ttyua  ttyw1  ttyx8  ttyyf  vport0p0
+hvc5                ptyaa  ptyc1  ptyd8  ptyef  ptyq6  ptyrd  ptyt4  ptyub  ptyw2  ptyx9  ptyz0  tty13   tty34  tty55  ttyaa  ttyc1  ttyd8  ttyef  ttyq6  ttyrd  ttyt4  ttyub  ttyw2  ttyx9  ttyz0  zero
+hvc6                ptyab  ptyc2  ptyd9  ptyp0  ptyq7  ptyre  ptyt5  ptyuc  ptyw3  ptyxa  ptyz1  tty14   tty35  tty56  ttyab  ttyc2  ttyd9  ttyp0  ttyq7  ttyre  ttyt5  ttyuc  ttyw3  ttyxa  ttyz1
+hvc7                ptyac  ptyc3  ptyda  ptyp1  ptyq8  ptyrf  ptyt6  ptyud  ptyw4  ptyxb  ptyz2  tty15   tty36  tty57  ttyac  ttyc3  ttyda  ttyp1  ttyq8  ttyrf  ttyt6  ttyud  ttyw4  ttyxb  ttyz2
+kmem                ptyad  ptyc4  ptydb  ptyp2  ptyq9  ptys0  ptyt7  ptyue  ptyw5  ptyxc  ptyz3  tty16   tty37  tty58  ttyad  ttyc4  ttydb  ttyp2  ttyq9  ttys0  ttyt7  ttyue  ttyw5  ttyxc  ttyz3
+kmsg                ptyae  ptyc5  ptydc  ptyp3  ptyqa  ptys1  ptyt8  ptyuf  ptyw6  ptyxd  ptyz4  tty17   tty38  tty59  ttyae  ttyc5  ttydc  ttyp3  ttyqa  ttys1  ttyt8  ttyuf  ttyw6  ttyxd  ttyz4
+mem                 ptyaf  ptyc6  ptydd  ptyp4  ptyqb  ptys2  ptyt9  ptyv0  ptyw7  ptyxe  ptyz5  tty18   tty39  tty6   ttyaf  ttyc6  ttydd  ttyp4  ttyqb  ttys2  ttyt9  ttyv0  ttyw7  ttyxe  ttyz5
+memory_bandwidth    ptyb0  ptyc7  ptyde  ptyp5  ptyqc  ptys3  ptyta  ptyv1  ptyw8  ptyxf  ptyz6  tty19   tty4   tty60  ttyb0  ttyc7  ttyde  ttyp5  ttyqc  ttys3  ttyta  ttyv1  ttyw8  ttyxf  ttyz6
+network_latency     ptyb1  ptyc8  ptydf  ptyp6  ptyqd  ptys4  ptytb  ptyv2  ptyw9  ptyy0  ptyz7  tty2    tty40  tty61  ttyb1  ttyc8  ttydf  ttyp6  ttyqd  ttys4  ttytb  ttyv2  ttyw9  ttyy0  ttyz7
+network_throughput  ptyb2  ptyc9  ptye0  ptyp7  ptyqe  ptys5  ptytc  ptyv3  ptywa  ptyy1  ptyz8  tty20   tty41  tty62  ttyb2  ttyc9  ttye0  ttyp7  ttyqe  ttys5  ttytc  ttyv3  ttywa  ttyy1  ttyz8
+null                ptyb3  ptyca  ptye1  ptyp8  ptyqf  ptys6  ptytd  ptyv4  ptywb  ptyy2  ptyz9  tty21   tty42  tty63  ttyb3  ttyca  ttye1  ttyp8  ttyqf  ttys6  ttytd  ttyv4  ttywb  ttyy2  ttyz9
+port                ptyb4  ptycb  ptye2  ptyp9  ptyr0  ptys7  ptyte  ptyv5  ptywc  ptyy3  ptyza  tty22   tty43  tty7   ttyb4  ttycb  ttye2  ttyp9  ttyr0  ttys7  ttyte  ttyv5  ttywc  ttyy3  ttyza
+ptmx                ptyb5  ptycc  ptye3  ptypa  ptyr1  ptys8  ptytf  ptyv6  ptywd  ptyy4  ptyzb  tty23   tty44  tty8   ttyb5  ttycc  ttye3  ttypa  ttyr1  ttys8  ttytf  ttyv6  ttywd  ttyy4  ttyzb
+pts                 ptyb6  ptycd  ptye4  ptypb  ptyr2  ptys9  ptyu0  ptyv7  ptywe  ptyy5  ptyzc  tty24   tty45  tty9   ttyb6  ttycd  ttye4  ttypb  ttyr2  ttys9  ttyu0  ttyv7  ttywe  ttyy5  ttyzc
+ptya0               ptyb7  ptyce  ptye5  ptypc  ptyr3  ptysa  ptyu1  ptyv8  ptywf  ptyy6  ptyzd  tty25   tty46  ttya0  ttyb7  ttyce  ttye5  ttypc  ttyr3  ttysa  ttyu1  ttyv8  ttywf  ttyy6  ttyzd
+ptya1               ptyb8  ptycf  ptye6  ptypd  ptyr4  ptysb  ptyu2  ptyv9  ptyx0  ptyy7  ptyze  tty26   tty47  ttya1  ttyb8  ttycf  ttye6  ttypd  ttyr4  ttysb  ttyu2  ttyv9  ttyx0  ttyy7  ttyze
+
 
 /etc
+adjtime                 dhcp                         firewalld      hostname       libaudit.conf          mime.types         papersize   rc.d              shadow              tmpfiles.d
+aliases                 dhcpcd.conf                  flexiblasrc    hosts          libblockdev            mke2fs.conf        passwd      rdma              shadow-             tpm2-tss
+alternatives            dhcpcd.duid                  flexiblasrc.d  i3             libguestfs-tools.conf  mock               passwd-     rearj.cfg         shells              Trolltech.conf
+appstream.conf          dillo                        fltk           i3status.conf  libibverbs.d           modprobe.d         pesign      redhat-release    skel                trusted-key.key
+asciidoc                DIR_COLORS                   fonts          idmapd.conf    libnl                  modules-load.d     pkcs11      request-key.conf  ssh                 udev
+asound.conf             DIR_COLORS.256color          freeipmi       ImageMagick-6  libpaper.d             motd               pkgconfig   request-key.d     ssl                 udisks2
+audit                   DIR_COLORS.lightbgcolor      fstab          incron.conf    libreport              motd.d             pki         resolv.conf       sssd                unbound
+axelrc                  dkms                         fuse.conf      incron.d       libssh                 mtab               plymouth    rhashrc           statetab.d          urlview.conf
+bash_completion.d       dnf                          fw_env.config  init.d         libuser.conf           multilib.conf      pm          rpc               subgid              usb_modeswitch.conf
+bashrc                  dnscrypt-proxy.conf          gconf          inittab        libvirt                Muttrc             polkit-1    rpkg              subuid              vconsole.conf
+bindresvport.blacklist  dnscrypt-proxy.conf.example  gcrypt         inputrc        locale.conf            Muttrc.local       popt.d      rpkg.conf         subversion          vimrc
+binfmt.d                dnsmasq.conf                 gdbinit        iproute2       localtime              nanorc             printcap    rpm               sudo.conf           virc
+cheat                   dnsmasq.d                    gdbinit.d      issue          login.defs             netconfig          profile     rpmdevtools       sudoers             virt-builder
+chkconfig.d             dracut.conf                  geoclue        issue.d        logrotate.d            NetworkManager     profile.d   rpmlint           sudoers.d           vulkan
+chrony.conf             dracut.conf.d                glances        issue.net      lorax                  networks           protocols   rsyncd.conf       sway                w3m
+chrony.keys             egl                          glvnd          kde            lvm                    nfs.conf           pulse       rwtab.d           swid                wgetrc
+cifs-utils              elinks.conf                  gnupg          kernel         lynx.cfg               nfsmount.conf      qemu        sasl2             sysconfig           X11
+colordiffrc             environment                  GREP_COLORS    koji.conf      lynx.lss               nftables           qemu-ga     screenrc          sysctl.conf         xattr.conf
+crypto-policies         ethertypes                   groff          koji.conf.d    lynx-site.cfg          nsswitch.conf      radvd.conf  security          sysctl.d            xdg
+csh.cshrc               exports                      group          kojid          machine-id             nsswitch.conf.bak  rc0.d       selinux           systemd             xml
+csh.login               exports.d                    group-         krb5.conf      magic                  ntp                rc1.d       sensors3.conf     system-release      yum.repos.d
+dblatex                 extlinux.conf                gshadow        krb5.conf.d    mailcap                nvme               rc2.d       sensors.d         system-release-cpe  zlogin
+dbus-1                  fakechroot                   gshadow-       ld.so.cache    mail.rc                openldap           rc3.d       services          tcsd.conf           zlogout
+dconf                   favicon.png                  gss            ld.so.conf     man_db.conf            opt                rc4.d       sestatus.conf     terminfo            zprofile
+default                 fedora-release               gssproxy       ld.so.conf.d   mc                     os-release         rc5.d       setroubleshoot    texlive             zshenv
+depmod.d                filesystems                  host.conf      lftp.conf      mercurial              pam.d              rc6.d       sgml              tigrc               zshrc
   
 
 
@@ -34,3 +120,4 @@
 # Em qual diretório do Linux você reconhece essa função?
 
 Resposta:
+Acredito que no diretório etc, onde se reconhecem todos os arquivos de configuração.
