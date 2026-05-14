@@ -9,7 +9,9 @@
 # No shell moderno, qual mecanismo cumpre papel equivalente?
 
 Resposta:
-
+  Utiliza-se o > e o < (que cumpre o papel do assign) para gravar ou ler
+    Para gravar: programa > /dev/st0
+    Para ler: Programa < /dev/st0
 # ─────────────────────────────────────────────────────
 
 # ATIVIDADE 7 — Make
@@ -18,6 +20,9 @@ Resposta:
 #    de despachar o próximo. No make, qual mecanismo cumpre esse
 #    papel? Como o make sabe que não precisa recompilar um arquivo
 #    que não mudou?
+    Comparando a a data e o horário do requisito e pré-requisito
+      Se o arquivo de destino for mais recente do que todos os seus pré-requisitos, o make assume que o arquivo está atualizado e pula a execução daquela regra. "Nothing to be done"
+      Se qualquer pré-requisito for mais recente do que o destino (ou se o destino não existir), o make dispara a receita de recompilação.
 
 Resposta 1:
 
@@ -25,5 +30,6 @@ Resposta 1:
 # 2. O monitor unificava "supervisor, carregador e rotinas de I/O
 #    sob uma interface textual". O que o Makefile unifica no fluxo
 #    de desenvolvimento moderno?
-
+      
 Resposta 2:
+      O make unifica o build system.
