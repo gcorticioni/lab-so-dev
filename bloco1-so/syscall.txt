@@ -1,6 +1,6 @@
 # Atividade 3 — Modo usuário × modo kernel
 # Preencha este arquivo durante a atividade.
-# ─────────────────────────────────────────────────────
+# ───────────────────────────────────────────
 
 # PARTE A — Observar syscalls com strace
 
@@ -8,40 +8,50 @@
 # strace echo "ola" 2>&1 | grep write
 
 Saída filtrada:
+write(1, "ola\n", 4ola
 
 # Anote:
 #   Argumento 1 (file descriptor):
 #   O que está sendo escrito:
 #   Valor de retorno:
 
-fd:
-conteúdo:
-retorno:
+fd:1 
+conteúdo:ola/n
+retorno:4
 
 
 # PARTE B — Programa C com write() direto
 
 # Cole aqui o código de syscall_direto.c que você escreveu:
 
-[código-fonte]
+#include <unistd.h>
+
+int main() {
+    const char msg[] = "Modo usuario -> kernel via write()\n";
+    write(1, msg, sizeof(msg) - 1);
+    return 0;
+}
 
 
-# Cole aqui a linha write(...) da saída de strace ./syscall_direto:
+# Cole aqui a linha write(...) da saída de strace -o strace.txt ./syscall_direto:
 
-[saída do strace]
+write(1, "Modo usuario -> kernel via write()\n", 35) = 35
 
 
 # PARTE C — Questões de síntese
 
-# 1. A apresentação afirma que "instruções de I/O são privilegiadas".
-#    Como um programa de usuário consegue fazer I/O sem executar
-#    instruções privilegiadas diretamente? (mínimo 2 frases)
+# 1. A apresentação mostrou que "instruções de I/O são privilegiadas". 
+#    Com base no que o strace revelou, explique com suas palavras como um programa
+#    de usuário consegue fazer I/O sem executar instruções privilegiadas diretamente.
 
 Resposta 1:
+Como o nosso programa roda no "modo usuário", ele não tem privilégio pra mexer direto nas peças do computador (hardware), tipo o teclado ou o monitor, pra evitar que a gente estrague alguma coisa no sistema. Pelo que o strace mostrou, o que a gente faz é usar uma chamada de sistema , como o `write`. Basicamente, o nosso programa pede "por favor" pro Sistema Operacional fazer a leitura ou escrita pra ele. Aí o sistema entra no "modo kernel" (onde ele tem poder total), faz o que tem que fazer com segurança, e devolve a resposta pro nosso programa.
 
 
-# 2. Compare write(fd, buffer, tamanho) com o "programa de canal"
-#    da apresentação: o que os dois têm em comum em termos de
-#    responsabilidades?
+# 2. Na apresentação sobre a genealogia do software, vimos que os programas de canal
+#    eram responsáveis por intermediar a transferência de dados entre a memória e os
+#    dispositivos, sem intervenção direta da CPU principal. Qual elemento do sistema 
+#    operacional moderno herda esse papel? 
 
 Resposta 2:
+Hoje em dia quem faz esse papel é o DMA (Direct Memory Access, ou Acesso Direto à Memória). Ele funciona tipo um ajudante do processador. Em vez do processador (CPU) ter que parar tudo o que tá fazendo pra ficar movendo arquivo do HD pra memória RAM, a CPU só dá a ordem: "DMA, copia esses dados aí pra mim". O DMA faz todo o trabalho de transferência sozinho. Enquanto isso, o processador fica livre pra rodar o nosso jogo ou o navegador, e o DMA avisa a CPU só quando terminar de copiar tudo.
